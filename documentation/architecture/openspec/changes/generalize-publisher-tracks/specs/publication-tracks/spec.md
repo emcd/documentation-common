@@ -16,8 +16,10 @@ The publisher SHALL support explicit tracks `stable`, `development`, and floatin
 
 #### Scenario: Invalid track config rejected
 
-- **WHEN** track configuration contains path traversal or namespaces colliding across tracks
+- **WHEN** track configuration contains path traversal or exact-tag namespaces ambiguously claiming one tag
 - **THEN** publication fails without promoting any output
+
+Overlapping latest-selector aliases (e.g. `stable` and floating major `v1` both selecting `v1.1`) are legitimate shared pointers, not collisions.
 
 ### Requirement: Atomic alias promotion
 
