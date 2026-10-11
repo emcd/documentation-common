@@ -39,4 +39,5 @@ cutover-approved docs-1.9 compatibility snapshot unchanged.
 - Reviewed revision pinned: docs-1.9 = 82082295a30c9ef2aa4c633bc609df70c4a0e127.
 - Total occurrences: 36 (template README 1, contribution 33, prd 1, decisions index 1).
 - Inventory versioning: each revision carries version and date; additions and removals are explicit at the reviewed revision.
+- TOML contract (locked by Python Owner 2026-10-11, enforced by validator): `complete` optional (true requires every website file covered); per entry `path` relative only (no absolute/traversal), `sha256` required when semantics frozen and enforced whenever present, `fragments` optional list of parsed element IDs (strings rejected, no char-splitting, never substring), `semantics` frozen or follow. Inventory mandatory whenever resolved selections include docs-line aliases; package-only publishes stay inventory-optional.
 - Owner: Documentation Owner (central inventory); site owners authorize per-site rewrites.
