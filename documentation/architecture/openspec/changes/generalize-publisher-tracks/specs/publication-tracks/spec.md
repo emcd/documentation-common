@@ -2,21 +2,21 @@
 
 ### Requirement: Explicit publication tracks
 
-The publisher SHALL support explicit tracks `stable`, `development`, and docs-line aliases (e.g. `docs-2/`), each matching its own tag namespace explicitly and never inferring docs selection from PEP 440 package tags. Track configuration SHALL declare per track a tag namespace, selector, and alias, and SHALL be validated to reject path traversal and namespace collision.
+The publisher SHALL support explicit tracks `stable`, `development`, and floating-major aliases (e.g. `v1/`), each matching its own tag namespace explicitly. Track configuration SHALL use kebab-case TOML keys and declare per track a tag namespace, selector, and alias, and SHALL be validated to reject path traversal and namespace collision. Floating majors SHALL resolve over finals only, never prereleases.
 
-#### Scenario: Docs tag publishes docs-line alias
+#### Scenario: Floating major publishes versioned alias
 
-- **WHEN** a `docs-2` tag is published
-- **THEN** a `docs-2/` subtree is produced alongside `stable/` and `development/` without altering package-version alias selection
+- **WHEN** releases in the `v1.*` line publish
+- **THEN** a `v1/` subtree tracks the newest final `v1.*` release alongside `stable/` and `development/` without altering package-version alias selection
 
 #### Scenario: Legacy stable behavior pinned
 
-- **WHEN** package versions publish with no docs tags present
+- **WHEN** package versions publish
 - **THEN** `stable/` resolves to the newest final release and `development/` to the newest prerelease exactly as before
 
 #### Scenario: Invalid track config rejected
 
-- **WHEN** track configuration contains path traversal or a docs namespace colliding with package tags
+- **WHEN** track configuration contains path traversal or namespaces colliding across tracks
 - **THEN** publication fails without promoting any output
 
 ### Requirement: Atomic alias promotion

@@ -1,11 +1,11 @@
 ## Context
 
-Canonical docs live in python-project-common today; documentation-common is nearly empty. Consumers: Python/Rust Copier templates bake `stable/sphinx-html/common/` HTTPS links at render time (36 links, 33 in contribution jinja); agents-common populates from `distribution/.../instructions/` (18 files, docs-1.9 pin) via pre-staged copy; workflows and raw links reference the same stable paths. Old git tags preserve source refs only, not hosted HTTP URLs. Operator signoff: no Copier/PyPI here, `emcdproj` stays, (b) first, sweep + mirror, two proposals. This change is gated on `generalize-publisher-tracks` staged proof.
+Canonical docs live in python-project-common today; documentation-common is nearly empty. Consumers: Python Copier templates bake `stable/sphinx-html/common/` HTTPS links at render time (36 links, 33 in contribution jinja) and Rust generated documentation will link to the canonical home once published; agents-common populates from `distribution/.../instructions/` (18 files, docs-1.9 pin) via pre-staged copy; workflows and raw links reference the same stable paths. Old git tags preserve source refs only, not hosted HTTP URLs. Operator signoff: no Copier/PyPI here, `emcdproj` stays, (b) first, sweep + mirror, two proposals, no `docs-*` tag family. This change is gated on `generalize-publisher-tracks` staged proof.
 
 ## Goals / Non-Goals
 
 **Goals:**
-- Canonical docs-2 URLs published in documentation-common with ADR 003 anchors held.
+- Canonical versioned URLs (releases plus floating majors) published in documentation-common with ADR 003 anchors held.
 - Compat mirror/redirects at old python paths retained beyond known-sites sweep; sweep reduces dependence, never proves deletability.
 - Template updates only after compat verified; agents source switch atomic with URL change (explicit ref, file-map lockstep, strip re-verified, manual re-ingest, no silent deletion).
 - Sunset revisited later (dated sunset possible); owner + validation job named.
@@ -29,11 +29,11 @@ Canonical docs live in python-project-common today; documentation-common is near
 
 ## Migration Plan
 
-1. Publisher generalize accepted with staged docs-2 proof.
-2. Publish canonical docs-2; verify compat mirror/redirects and every versioned legacy-inventory entry plus fragments.
+1. Publisher generalize accepted with staged versioned proof.
+2. Publish canonical versioned URLs; verify compat mirror/redirects and every versioned legacy-inventory entry plus fragments.
 3. Update template assets; execute atomic agents source switch with manual re-ingest.
 4. Operator cutover approval; sunset revisited later (dated sunset possible).
 
 ## Open Questions
 
-- None blocking; frozen baseline is pinned in spec (old origin retains cutover-approved docs-1.9 snapshot unchanged until explicitly reviewed and operator-approved update; new consumers use docs-2; per-entry follow never inferred), mapping construction is a checked-in TOML file, and the known-sites inventory is a versioned list seeded from template links with Docs Owner as central owner.
+- None blocking; frozen baseline is pinned in spec (old origin retains cutover-approved docs-1.9 snapshot unchanged until explicitly reviewed and operator-approved update; new consumers use canonical versioned URLs; per-entry follow never inferred), mapping construction is a checked-in TOML file, and the known-sites inventory is a versioned list seeded from template links with Docs Owner as central owner.

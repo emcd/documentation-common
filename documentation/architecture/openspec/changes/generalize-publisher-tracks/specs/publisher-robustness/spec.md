@@ -4,9 +4,9 @@
 
 The publisher SHALL build the full site tree and validate it via static-site-builder dry run, link checking, track-config and matrix schema validation, and immutable-tree presence before promoting aliases. Validation covers navigation, release matrices/indexes, immutable historical trees, and the versioned legacy-link inventory (seeded with 36 entries; all entries at the reviewed publication revision MUST validate, with explicit additions and removals).
 
-#### Scenario: Staged docs-2 proof validates
+#### Scenario: Staged versioned proof validates
 
-- **WHEN** staged output for a docs-line alias is built
+- **WHEN** staged output for a versioned alias is built
 - **THEN** old-input→old-output equivalence holds for package tracks and every legacy-link inventory entry resolves before promotion is allowed
 
 #### Scenario: Drift blocks promotion

@@ -1,7 +1,7 @@
 ## 1. Canonical publication (gated: proposal approval authorizes implementation; staged-output review authorizes cutover consideration)
 
-- [ ] 1.1 Confirm publisher-generalize acceptance and staged docs-2 proof before cutover
-- [ ] 1.2 Publish canonical docs-2 URLs with ADR 003 anchors and checked-in old-base→new-base fragment mapping
+- [ ] 1.1 Confirm publisher-generalize acceptance and staged versioned proof before cutover
+- [ ] 1.2 Publish canonical versioned URLs with ADR 003 anchors and checked-in old-base→new-base fragment mapping
 - [ ] 1.3 Test endpoint HTML IDs, every versioned legacy-inventory entry, and redirect chains; reject unapproved retargets
 
 ## 2. Compatibility
@@ -12,7 +12,7 @@
 
 ## 3. Consumer cutover (gated: no file moves until Tier-1/Tier-2 review + operator approval)
 
-- [ ] 3.1 Update template assets to canonical URLs only after compat verification, keeping Rust no-tree renders clean (no file moves until Tier-1/Tier-2 review + operator approval)
+- [ ] 3.1 Update template assets to canonical URLs only after compat verification, keeping Rust generated-documentation links clean (no file moves until Tier-1/Tier-2 review + operator approval)
 - [ ] 3.2 Execute atomic agents source switch at pinned commit with manifest, map lockstep, strip re-verification, manual re-ingest, rename detection, and rollback support (no file moves until Tier-1/Tier-2 review + operator approval)
 - [ ] 3.3 Test failed fetch, map, and strip handling plus interrupted promotion and rollback
 - [ ] 3.4 Obtain Tier-1/Tier-2 review and operator cutover approval before any file moves; revisit sunset date later
