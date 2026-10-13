@@ -156,6 +156,11 @@ myst_enable_extensions = [
     'tasklist',         # - [ ] tasks
 ]
 
+# Auto-generated heading anchors satisfy `.md#fragment` cross-links
+# (explicit `(target)=` anchors do not, in this myst version) and keep
+# GitHub rendering intact.
+myst_heading_anchors = 3
+
 # -- Options for todo extension ----------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#configuration
 
