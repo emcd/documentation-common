@@ -26,12 +26,12 @@ Related projects:
 Prerequisites: `uv` and the Sphinx dependencies (`sphinx`, `furo`,
 `myst-parser`, `sphinx-copybutton`, `sphinx-inline-tabs`).
 
-Build HTML into a scratch directory (never commit build output):
+Build HTML into the ignored scratch directory (never commit build output):
 
 ```sh
 uv run --with sphinx --with furo --with myst-parser \
     --with sphinx-copybutton --with sphinx-inline-tabs \
-    sphinx-build -b html documentation /tmp/documentation-common-html
+    sphinx-build -b html documentation .auxiliary/temporary/sphinx-build
 ```
 
 The build must complete with zero warnings. Two known-good patterns are
