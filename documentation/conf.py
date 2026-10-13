@@ -56,6 +56,7 @@ extensions = [
 templates_path = [ '_templates' ]
 
 exclude_patterns = [
+    'README.md',  # Subsystem note; not published content.
     'architecture/**',
 ]
 
