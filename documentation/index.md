@@ -8,6 +8,28 @@ previously published from `python-project-common`.
 :maxdepth: 2
 
 development
+common/architecture
+common/architecture-python
+common/conduct
+common/environment
+common/environment-python
+common/maintenance
+common/nomenclature
+common/nomenclature-latin
+common/nomenclature-germanic
+common/practices
+common/practices-python
+common/practices-rust
+common/practices-toml
+common/python-autoformat
+common/releases
+common/releases-python
+common/requirements
+common/style
+common/tests
+common/tests-python
+common/validation
+common/validation-python
 ```
 
 ## Indices
