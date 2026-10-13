@@ -11,7 +11,8 @@ When the template revs docs tooling, diff these files against
 `template/documentation/` upstream and port deliberately:
 
 - `conf.py` — extensions, theme, MyST config, `linkcheck_ignore`
-- `index.rst` — toctree structure
+- `index.md` — toctree structure (Markdown with MyST; all site sources are
+  Markdown since the common guides already are)
 
 Deliberate divergences from the template (do not "sync" these away):
 
