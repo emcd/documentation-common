@@ -7,6 +7,21 @@ on:
 
 jobs:
 
+  # TEMPORARY diagnostics for the 1.62.1 pipx/uv install failure (runs
+  # 38595752831 * 2). Remove once the installer fault is isolated.
+  diagnose-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log installer versions
+        run: |
+          pipx --version
+          uv --version
+          python3 --version
+      - name: Try direct uv tool install
+        continue-on-error: true
+        run: |
+          uv tool install 'emcd-projects==1.62.1' --verbose 2>&1 | tail -30
+
   docsgen:
     permissions:
       contents: write
