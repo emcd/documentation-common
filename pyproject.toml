@@ -1,0 +1,34 @@
+# vim: set filetype=toml fileencoding=utf-8:
+# -*- mode: toml ; coding: utf-8 -*-
+
+# Docs-only project: no Python package is built or published from this
+# repository. This file exists solely to provide the Hatch `develop`
+# environment (Sphinx toolchain) consumed by the documentation workflows.
+
+[project]
+name = 'documentation-common'
+description = 'Common documentation for emcd projects.'
+license = 'Apache-2.0'
+requires-python = '>= 3.12'
+version = '1.0'
+
+[tool.hatch.envs.default]
+python = '3.12'
+
+[tool.hatch.envs.develop]
+description = ''' Documentation environment. '''
+dependencies = [
+  'furo',
+  'myst-parser',
+  'sphinx',
+  'sphinx-copybutton',
+  'sphinx-inline-tabs',
+]
+
+[tool.hatch.envs.develop.scripts]
+docsgen = [
+  """sphinx-build -E -b linkcheck -d .auxiliary/caches/sphinx --quiet \
+      documentation .auxiliary/artifacts/sphinx-linkcheck""",
+  """sphinx-build -a -d .auxiliary/caches/sphinx --quiet \
+      documentation .auxiliary/artifacts/sphinx-html""",
+]
