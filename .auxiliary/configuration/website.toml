@@ -1,0 +1,12 @@
+# vim: set filetype=toml fileencoding=utf-8:
+# -*- mode: toml ; coding: utf-8 -*-
+
+# Publication track configuration for documentation-common.
+# Docs-only project: floating majors plus the version table beneath.
+# No `stable`/`development` aliases by operator decision.
+# Extend with one `[tracks.vN]` block per major line as releases land.
+
+[tracks.v1]
+tag-namespace = "v1.*"
+selector = "latest-final"
+alias = "v1"
