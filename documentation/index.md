@@ -35,5 +35,4 @@ common/validation-python
 ## Indices
 
 - {ref}`genindex`
-- {ref}`modindex`
 - {ref}`search`
