@@ -1,23 +1,11 @@
-# Development guide
+# Maintenance
 
-Notes for developers working in this repository. Consumers need only the
+Notes for maintainers working in this repository. Consumers need only the
 project README at the repository root.
-
-## Related projects
-
-- `python-project-common` — Python Copier template and project tooling.
-- `rust-project-common` — Rust Copier template; links out to this site,
-  ships no documentation tree.
-- `agents-common` — agent configurations; consumes staged guides via
-  `agentsmgr populate`.
 
 ## Repository layout
 
 - `documentation/` — Sphinx site sources (Markdown with MyST).
-- `documentation/architecture/` — architecture notes and OpenSpec home
-  (interim; OpenSpec workflow is described in
-  `.auxiliary/agents/procedures/openspec.md`).
-- `openspec/` — symlink to the OpenSpec home above.
 
 ## Building the documentation
 

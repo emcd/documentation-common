@@ -7,7 +7,7 @@ previously published from `python-project-common`.
 ```{toctree}
 :maxdepth: 2
 
-development
+maintenance
 common/architecture
 common/architecture-python
 common/conduct
