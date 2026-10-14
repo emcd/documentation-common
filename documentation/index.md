@@ -11,6 +11,7 @@ maintenance
 common/architecture
 common/architecture-python
 common/conduct
+common/contribution
 common/environment
 common/environment-python
 common/maintenance
