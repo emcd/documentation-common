@@ -1,0 +1,19 @@
+name: documenter
+
+on:
+  push:
+    tags: [ 'v[1-9]+.*' ]
+  workflow_dispatch:
+
+jobs:
+
+  docsgen:
+    permissions:
+      contents: write
+      id-token: write
+      pages: write
+    uses: emcd/python-project-common/.github/workflows/xrepo--documenter.yaml@gha-1
+    with:
+      include-reports: false
+      python-version: '3.12'
+      emcd-projects-version: '1.62'
