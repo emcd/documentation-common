@@ -36,7 +36,7 @@ copyright = ( # noqa: A001
     _calculate_copyright_notice( ) )
 # Static version: this repository has no Python package to import a version
 # from. Bump per documentation release line.
-release = version = '1.0.1'
+release = version = '1.0.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

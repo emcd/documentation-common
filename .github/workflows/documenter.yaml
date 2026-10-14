@@ -16,5 +16,5 @@ jobs:
     with:
       include-reports: false
       python-version: '3.12'
-      emcd-projects-version: '1.62.1'
+      emcd-projects-version: '1.62.2'
       production: false
