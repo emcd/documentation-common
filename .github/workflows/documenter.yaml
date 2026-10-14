@@ -20,6 +20,9 @@ jobs:
       - name: Try direct uv tool install
         continue-on-error: true
         run: |
+          python3 -m pip install --quiet --user uv
+          export PATH="${HOME}/.local/bin:${PATH}"
+          uv --version
           uv tool install 'emcd-projects==1.62.1' --verbose 2>&1 | tail -30
 
   docsgen:
