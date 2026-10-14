@@ -15,7 +15,7 @@ jobs:
       - name: Log installer versions
         run: |
           pipx --version
-          uv --version
+          uv --version || echo "no bare uv on runner"
           python3 --version
       - name: Try direct uv tool install
         continue-on-error: true
