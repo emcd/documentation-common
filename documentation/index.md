@@ -1,8 +1,7 @@
 # documentation-common
 
-Common documentation for all projects: language-neutral standards and
-guidance, plus language-specific overlays. Canonical home for the guides
-previously published from `python-project-common`.
+Common documentation for all `emcd/` projects: language-neutral standards
+and guidance, plus language-specific overlays.
 
 ```{toctree}
 :maxdepth: 2
