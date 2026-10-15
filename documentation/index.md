@@ -8,11 +8,14 @@ previously published from `python-project-common`.
 :maxdepth: 2
 
 maintenance
+changelog
 common/architecture
 common/architecture-python
 common/conduct
+common/contribution
 common/environment
 common/environment-python
+common/license
 common/maintenance
 common/nomenclature
 common/nomenclature-latin

@@ -4,6 +4,12 @@ on:
   push:
     tags: [ 'v[1-9]+.*' ]
   workflow_dispatch:
+    inputs:
+      production:
+        description: 'Write publication branch (healing/backfill only; tags imply production).'
+        default: false
+        required: false
+        type: boolean
 
 jobs:
 
@@ -17,4 +23,4 @@ jobs:
       include-reports: false
       python-version: '3.12'
       emcd-projects-version: '1.62.2'
-      production: false
+      production: ${{ inputs.production || github.ref_type == 'tag' }}
