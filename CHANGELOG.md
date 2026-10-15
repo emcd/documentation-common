@@ -7,6 +7,19 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-10-15
+
+### Added
+
+- Alpha checkpoint flow in the Python release guide (upstreamed runbook).
+- Explicit production control on documenter dispatch (tags imply
+  production, manual runs stage unless requested).
+
+### Changed
+
+- README with hyperlinked related projects and published-site link.
+- Index opening aligned with README scope.
+
 ## [1.0.3] - 2026-10-15
 
 ### Added
