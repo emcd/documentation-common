@@ -8,6 +8,7 @@ previously published from `python-project-common`.
 :maxdepth: 2
 
 maintenance
+changelog
 common/architecture
 common/architecture-python
 common/conduct
