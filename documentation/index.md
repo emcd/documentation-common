@@ -14,6 +14,7 @@ common/conduct
 common/contribution
 common/environment
 common/environment-python
+common/license
 common/maintenance
 common/nomenclature
 common/nomenclature-latin
