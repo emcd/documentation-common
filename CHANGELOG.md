@@ -7,6 +7,13 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-10-16
+
+### Changed
+
+- Restored Python architecture overlay; neutral architecture guide
+  rewritten as close-to-source synthesis.
+
 ## [1.0.4] - 2026-10-15
 
 ### Added
