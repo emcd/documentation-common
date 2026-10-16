@@ -8,8 +8,6 @@ and guidance, plus language-specific overlays.
 
 maintenance
 changelog
-common/architecture
-common/architecture-python
 common/conduct
 common/contribution
 common/environment
