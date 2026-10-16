@@ -60,6 +60,7 @@ guides above:
   [Python testing](tests-python.md) ·
   [Python validation](validation-python.md) ·
   [Python releases](releases-python.md) ·
+  [Python architecture](architecture-python.md) ·
   [Python automatic formatting](python-autoformat.md)
 - [Rust practices](practices-rust.md)
 - [TOML practices](practices-toml.md)
