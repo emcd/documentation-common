@@ -7,6 +7,13 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.7] - 2026-11-04
+
+### Fixed
+
+- Pin website utility to 1.62.3 (single-installer closure; unblocks
+  tag publication startup).
+
 ## [1.0.6] - 2026-11-04
 
 ### Changed
