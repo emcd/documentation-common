@@ -7,6 +7,14 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-11-04
+
+### Changed
+
+- Git Hooks guide prescribes per-user pre-commit install outside Hatch
+  environments; hooks delegate to guest-local Hatch envs with prune
+  recovery.
+
 ## [1.0.5] - 2026-10-16
 
 ### Changed
