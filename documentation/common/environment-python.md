@@ -49,12 +49,29 @@ the [environment guide](environment.md).
 <a id="git-hooks"></a>
 ## Git Hooks
 
-Install Git pre-commit and pre-push hooks with the Python development
-environment:
+Install Git pre-commit and pre-push hooks with a per-user `pre-commit`
+installation outside any Hatch development environment, so hooks keep
+working even when Hatch environments are pruned or rebuilt:
 
 ```shell
-hatch --env develop run pre-commit install --config .auxiliary/configuration/pre-commit.yaml
+uv tool install pre-commit
 ```
+
+`pipx install pre-commit` remains functionally compatible, but `uv` is the
+single documented path to match the tooling section above.
+
+Then install the hooks in the repository:
+
+```shell
+pre-commit install --config .auxiliary/configuration/pre-commit.yaml
+```
+
+The hooks themselves delegate to Hatch environments, which are resolved
+guest-locally at hook time and never shared across the sandbox boundary.
+If a hook fails because its environment went stale, rebuild the project
+environments with `hatch env prune` from the project root
+(all environments are removed and recreated on next use) and re-run
+the hook.
 
 <a id="refreshing-environments"></a>
 ## Refreshing Environments
