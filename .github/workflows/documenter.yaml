@@ -22,5 +22,5 @@ jobs:
     with:
       include-reports: false
       python-version: '3.12'
-      emcd-projects-version: '1.62.2'
+      emcd-projects-version: '1.62.3'
       production: ${{ inputs.production || github.ref_type == 'tag' }}
