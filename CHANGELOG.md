@@ -7,6 +7,13 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.8] - 2026-11-12
+
+### Fixed
+
+- Distribution lookup example targets stdlib `importlib.metadata`;
+  backport note scoped to pre-3.12 floors.
+
 ## [1.0.7] - 2026-11-04
 
 ### Fixed
