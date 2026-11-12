@@ -13,7 +13,7 @@ The system SHALL publish canonical versioned URLs (documentation releases plus f
 #### Scenario: New consumers use canonical URLs
 
 - **WHEN** a new project renders after cutover
-- **THEN** its links target the canonical versioned URLs with ADR 003 anchors intact
+- **THEN** its links target the canonical versioned URLs with anchor IDs intact per the anchor-stability requirement below
 
 #### Scenario: Old baked links keep resolving
 
@@ -38,3 +38,17 @@ Old-origin pages SHALL retain the cutover-approved docs-1.9 compatibility snapsh
 
 - **WHEN** a per-entry mapping proposes following a newer docs-major
 - **THEN** it is rejected unless an explicitly reviewed and operator-approved compat-track update authorizes it
+
+### Requirement: Anchor stability within a docs-major line
+
+Every heading in the common guides SHALL carry an explicit anchor ID. Anchor IDs form a compatibility contract within a docs-major line: renaming or removing an anchor SHALL require a new docs-major release. Additions MAY arrive in any release.
+
+#### Scenario: Anchor ID rename requires docs-major bump
+
+- **WHEN** an anchor-ID rename or removal is proposed within the current docs-major line
+- **THEN** it is rejected unless released as a new docs-major line
+
+#### Scenario: Heading text change keeping its anchor ID
+
+- **WHEN** a heading's display text changes but its explicit anchor ID is preserved
+- **THEN** no docs-major bump is required
