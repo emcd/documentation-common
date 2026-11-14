@@ -7,6 +7,12 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.9] - 2026-11-14
+
+### Changed
+
+- Python guide uses PEP 695 `type` statements for reused types.
+
 ## [1.0.8] - 2026-11-12
 
 ### Fixed
